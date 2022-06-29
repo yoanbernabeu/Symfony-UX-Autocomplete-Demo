@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+<main class="container m-5">
+  <div class="bg-light p-5 rounded">
+    <h1>Symfony UX Autocomplete Demo</h1>
+    <p class="lead">This project is a demo of the Symfony UX Autocomplete component.</p>
+    <a class="btn btn-lg btn-primary" href="{{ path('app_simple_index') }}" role="button">Simple select</a>
+    <a class="btn btn-lg btn-primary" href="{{ path('app_multiple_index') }}" role="button">Multiple select</a>
+  </div>
+</main>
+
+
+
+{% endblock %}

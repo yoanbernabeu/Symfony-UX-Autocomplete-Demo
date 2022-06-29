@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Multiple{% endblock %}
+
+{% block body %}
+    <h1>Create new Multiple</h1>
+
+    {{ include('multiple/_form.html.twig') }}
+
+    <a href="{{ path('app_multiple_index') }}">back to list</a>
+{% endblock %}

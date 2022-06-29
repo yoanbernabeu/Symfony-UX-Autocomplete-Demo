@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Simple{% endblock %}
+
+{% block body %}
+    <h1>Create new Simple</h1>
+
+    {{ include('simple/_form.html.twig') }}
+
+    <a href="{{ path('app_simple_index') }}">back to list</a>
+{% endblock %}

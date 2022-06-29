@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Simple index{% endblock %}
+
+{% block body %}
+    <h1>Simple index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for simple in simples %}
+            <tr>
+                <td>{{ simple.id }}</td>
+                <td>{{ simple.nom }}</td>
+                <td>
+                    <a href="{{ path('app_simple_show', {'id': simple.id}) }}">show</a>
+                    <a href="{{ path('app_simple_edit', {'id': simple.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_simple_new') }}">Create new</a>
+{% endblock %}

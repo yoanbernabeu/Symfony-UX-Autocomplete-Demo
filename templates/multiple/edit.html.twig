@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Multiple{% endblock %}
+
+{% block body %}
+    <h1>Edit Multiple</h1>
+
+    {{ include('multiple/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_multiple_index') }}">back to list</a>
+
+    {{ include('multiple/_delete_form.html.twig') }}
+{% endblock %}
